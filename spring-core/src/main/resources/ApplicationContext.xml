@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+      <context:annotation-config />
+      <!-- Setter injection -->
+      <bean id="person" class="com.training.spring.Person" autowire = "byName">
+       <property name = "firstName" value = "Samuel" />
+       <property name = "lastName" value = "Disuza" />
+       <property name = "age" value = "30" />
+     
+            </bean> 
+            
+            
+           <!-- Constructor injection -->
+
+           <bean id ="car" class ="com.training.spring.Car">
+           <constructor-arg index = "0" value = "Honda"/>
+           <constructor-arg index = "1" value = "City"/>
+           <constructor-arg index = "2" value = "2020"/>
+           
+           </bean>
+           <!-- Constructor injection -->
+                      <bean id ="animal" class = "com.training.spring.Animal">
+           
+           <constructor-arg index = "0" value = "Tommy"/>
+           <constructor-arg index = "1" value = "2"/>
+           <constructor-arg index = "2" value = "Golden"/>
+          
+         </bean> 
+     	 <bean id="dog" class="com.training.spring.Dog">
+     	 	<constructor-arg index="0" value="Buddy" />
+     	 	<constructor-arg index="1" value="4" />
+     	 	<constructor-arg index="2" value="beige" />
+     	 	<constructor-arg index="3" value="labrador" />
+     	 	<constructor-arg index="4" value="65" />
+            </bean>
+             <bean id="cat" class="com.training.spring.Cat">
+      		<constructor-arg index="0" value="Jimmy" />
+     	 	<constructor-arg index="1" value="3" />
+     	 	<constructor-arg index="2" value="White" />
+     	 	<constructor-arg index="3" value="Indian" />
+     	 	<constructor-arg index="4" value="8" />
+      	</bean>      
+            
+ </beans>
